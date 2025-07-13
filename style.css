@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.image-gradient{
+    position:absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur{
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: 0;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
+
+nav a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    z-index: 999
+}
+
+nav a:hover{
+    color: #333333;
+}
+
+.btn-siging{
+    background-color:  #333333;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size:  1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    z-index: 999
+}
+
+.btn-siging:hover{
+    background-color: black;
+}
+
+.btn-siging.join-us-btn {
+  min-width: 260px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content{
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+.tag-box{
+    position: relative;
+    width: 18rem ;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5,#5300a0, #757575, #656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px white;
+}
+
+@keyframes animationGradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag-box .tag:hover{
+    color: #333333
+}
+
+.container h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2 ;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418) ;
+}
+
+.description{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: black;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.btn-get-started{
+    text-decoration: none;
+    border: 1px solid#2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease
+}
+.btn-get-started :hover{
+background-color: #333333;
+}
+
+.singing-main{
+    text-decoration: none;
+    border: 1px solid#2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease
+}
+
+.singing-main:hover{
+background-color: #333333;
+}
+
+.robot-3d{
+    position : absolute;
+    top: 0;
+    right: -20%;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  nav, header .btn-siging {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: none;
+  border: none;
+  font-size: 2.2em;
+  color: #222;
+  cursor: pointer;
+  z-index: 10010 !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-dropdown {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.12);
+  z-index: 10003;
+  flex-direction: column;
+  padding: 32px 24px 24px 24px;
+  gap: 24px;
+  animation: slideInMenu 0.3s;
+}
+
+.mobile-dropdown.active {
+  display: flex;
+}
+
+.mobile-dropdown a {
+  font-size: 1.2em;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.mobile-dropdown .btn-siging {
+  display: none !important;
+}
+
+.mobile-dropdown .contact-link {
+  font-size: 1.2em;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 18px;
+  font-weight: 500;
+  display: block;
+}
+
+.mobile-dropdown .close-mobile-menu {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #222;
+  cursor: pointer;
+}
+
+@keyframes slideInMenu {
+  from { right: -320px; opacity: 0; }
+  to { right: 0; opacity: 1; }
+}
+
+/* Footer always at the bottom */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto !important;
+  position: static !important;
+  text-align: center;
+  width: 100%;
+  padding: 24px 0 12px 0;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 0.95em;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Responsive Design */
+@media (max-width:1300px){
+    header{
+        padding: 1rem 0.5rem;
+    }
+
+    .content{
+        margin-top: 85%;
+    }
+    .robot-3d{
+        scale: 0.8;
+        top:-20%;
+        right: 2%;
+    }
+}
+
+@media (max-width:768px){
+    header{
+        padding: 1rem 0.1rem;
+    }
+    nav{
+        display: none;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+
+    .singing-main{
+        padding: o.6rem 1.5rem;
+    }
+
+     .content{
+        margin-top: 25%;
+    }
+
+    .robot-3d{
+        scale: 0.5;
+        top: -25%;
+        right: 0;
+    }
+    .content{
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+
+    /* HERO IMAGE MOBILE OVERRIDES */
+    .main-centered-container > img {
+        border-radius: 0 !important;
+        width: 100vw !important;
+        max-width: 1800px !important;
+        height: auto !important;
+        margin: 0 auto 48px auto !important;
+        padding: 0 !important;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+    @media (max-width: 1800px) {
+        .main-centered-container > img {
+            max-width: 100vw !important;
+        }
+    }
+    .main-centered-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+    }
+    .container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+    }
+    .tag-box{
+        width: 12rem;
+    }
+
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    .btn-get-started{
+        font-size: 0.8rem;
+        padding: 0.5rem 1.2rem;
+    }
+    .singing-main{
+        font-size: 0.8rem;
+        padding: 0.5rem 2rem;
+    }
+}
+
+/* Image Modal (Lightbox) Styles */
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(20,20,20,0.97);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.2s;
+}
+.img-modal.active {
+  display: flex;
+}
+.img-modal-content {
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: auto;
+  background: none;
+  /* Remove object-fit for natural size */
+}
+.img-modal-close {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+  font-family: sans-serif;
+  transition: color 0.2s;
+}
+.img-modal-close:hover {
+  color: #aaa;
+}
+.img-modal-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+  user-select: none;
+  padding: 0 18px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: background 0.2s, color 0.2s;
+}
+#imgModalPrev { left: 32px; }
+#imgModalNext { right: 32px; }
+.img-modal-arrow:hover {
+  color: #aaa;
+  background: rgba(0,0,0,0.35);
+}
+@media (max-width: 600px) {
+  .img-modal-content {
+    max-width: 98vw;
+    max-height: 60vh;
+  }
+  .img-modal-close {
+    top: 12px;
+    right: 16px;
+    font-size: 2.2rem;
+  }
+  #imgModalPrev, #imgModalNext {
+    font-size: 2.2rem;
+    left: 8px;
+    right: 8px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  width: 100vw;
+  overflow-x: hidden !important;
+}
+
+@media (max-width: 1024px) {
+  .container, .page-wrapper {
+    padding: 0 8px !important;
+    max-width: 100vw !important;
+  }
+  header {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .container, .page-wrapper {
+    padding: 0 4px !important;
+    max-width: 100vw !important;
+  }
+  header {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 15px;
+  }
+  .container, .page-wrapper {
+    padding: 0 2vw !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 2vw;
+    gap: 0.5rem;
+  }
+  header h1 {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+  .btn-siging {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+    margin-top: 0.5rem;
+  }
+  nav {
+    gap: 1.2rem;
+    margin-left: 0;
+  }
+  nav a {
+    font-size: 1.1rem;
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    font-size: 14px;
+  }
+  .container, .page-wrapper {
+    padding: 0 1vw !important;
+  }
+  header {
+    padding: 0.5rem 1vw;
+  }
+  .btn-siging {
+    font-size: 0.98rem;
+    padding: 0.6rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  html, body {
+    font-size: 13px;
+  }
+  header {
+    padding: 0.3rem 0.5vw;
+  }
+}
+
+img, picture, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container, .page-wrapper {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  box-sizing: border-box;
+}
+
+footer {
+  padding: 18px 0 10px 0;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  min-height: 48px;
+}
+
+.hide {
+  display: none !important;
+}
+  

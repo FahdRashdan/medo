@@ -1,0 +1,176 @@
+/* About Us Page Styles */
+.aboutus-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 60px auto 0 auto;
+    padding: 0 32px;
+    gap: 60px;
+}
+.aboutus-left {
+    flex: 1.2;
+    min-width: 340px;
+}
+.aboutus-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    color: black;
+}
+.aboutus-text p {
+    font-size: 1.08rem;
+    color: #444;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    text-align: left;
+}
+.aboutus-right {
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+    margin-top: 10px;
+}
+.aboutus-contact-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: black;
+}
+.aboutus-contact-info {
+    margin-bottom: 18px;
+}
+.aboutus-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.aboutus-icon {
+    font-size: 1.1rem;
+    color: #222;
+}
+.aboutus-contact-link {
+    color: #444;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.aboutus-getintouch {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 24px 0 10px 0;
+    color: black;
+}
+.aboutus-socials {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.aboutus-social-icon {
+    font-size: 1.2rem;
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.aboutus-social-icon:hover {
+    color: #5300a0;
+}
+.aboutus-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+.aboutus-form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.aboutus-form input[type="text"],
+.aboutus-form input[type="email"],
+.aboutus-form textarea {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1.5px solid #111;
+    font-size: 1rem;
+    background: #fafafa;
+    color: #111;
+    outline: none;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    transition: border 0.2s;
+}
+.aboutus-form input[type="text"]:focus,
+.aboutus-form input[type="email"]:focus,
+.aboutus-form textarea:focus {
+    border: 1.5px solid #111;
+}
+.aboutus-form textarea {
+    min-height: 70px;
+    max-height: 180px;
+    resize: vertical;
+}
+.aboutus-form button {
+    align-self: center;
+    width: 60%;
+    padding: 12px 0;
+    background: #fff;
+    color: #111;
+    border: 2px solid #111;
+    border-radius: 22px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(80,0,160,0.04);
+    letter-spacing: 0.03em;
+}
+.aboutus-form button:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+@media (max-width: 900px) {
+    .aboutus-container {
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 12px;
+    }
+    .aboutus-right {
+        max-width: 100%;
+    }
+}
+@media (max-width: 700px) {
+  .aboutus-container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0;
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .aboutus-left, .aboutus-right {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0 2vw;
+    box-sizing: border-box;
+  }
+  .aboutus-title {
+    font-size: clamp(1.2rem, 6vw, 1.7rem);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .aboutus-text p, .aboutus-contact-title, .aboutus-getintouch {
+    font-size: clamp(0.98rem, 3vw, 1.1rem);
+    text-align: left;
+    line-height: 1.8;
+  }
+  .aboutus-right {
+    max-width: 100vw;
+    min-width: 0;
+    margin-top: 0;
+  }
+} 

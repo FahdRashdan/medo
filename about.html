@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | atelier23</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/about.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">
+        <span style="display:none;">atelier23</span>
+        <img src="../logo.svg" alt="atelier23 logo" style="height:72px;vertical-align:middle;margin-top:-28px;" />
+      </h1>
+      <nav>
+        <a data-aos="fade-down" data-aos-duration="1500" href="main.html">Home</a>
+        <a data-aos="fade-down" data-aos-duration="2000" href="projects.html">Projects</a>
+        <a data-aos="fade-down" data-aos-duration="2500" href="partners.html">Partners</a>
+        <a data-aos="fade-down" data-aos-duration="3000" href="about.html">About Us</a>
+        <a data-aos="fade-down" data-aos-duration="3000" href="careers.html">Careers</a>
+      </nav>
+      <button class="btn-siging">Contact Us</button>
+    </header>
+
+    <div class="aboutus-container">
+      <div class="aboutus-left">
+        <h2 style="text-align:left;font-size:2.5rem;margin-bottom:1.5rem;color:#222;">About atelier23</h2>
+        <div class="aboutus-text">
+          <p>
+            Welcome to atelier23! We are an architectural<br>
+            visualization studio that has been setting the industry<br>
+            standard for excellence since 2011. Our team of<br>
+            innovative experts has worked with some of the<br>
+            world's top real estate developers and architecture<br>
+            firms to bring their visions to life in stunning 3D<br>
+            renderings.
+            <br><br>
+            Our focus is to create realistic images that convey the<br>
+            desired story through our unique blend of artistry and<br>
+            technology.
+            <br><br>
+            We strive to create an immersive experience for our<br>
+            clients, enabling them to visualize their ideas before<br>
+            even breaking ground. Whether you are a real estate<br>
+            developer, architect, or interior designer, we have the<br>
+            perfect tool to help you move your projects forward.
+            <br><br>
+            We believe that design should be a reflection of your<br>
+            values and we take great pride in creating visuals that<br>
+            embody the spirit of your project.
+            <br><br>
+            We are truly passionate about bringing your vision to<br>
+            life, and we look forward to seeing how our work can<br>
+            help bring success to your project.
+          </p>
+          
+          
+          
+        </div>
+      </div>
+
+      <div class="aboutus-right" id="contact">
+        <h2 class="aboutus-contact-title">Contact us</h2>
+        <div class="aboutus-contact-info">
+          <div class="aboutus-contact-row">
+            <span class="aboutus-icon" aria-label="email" style="display:flex;align-items:center;">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <a href="mailto:info@atelier23egypt.com" class="aboutus-contact-link">info@atelier23egypt.com</a>
+          </div>
+
+          <div class="aboutus-contact-row">
+            <span class="aboutus-icon" aria-label="phone" style="display:flex;align-items:center;">
+              <i class="fa-solid fa-phone"></i>
+            </span>
+            <a href="tel:+201002118700" class="aboutus-contact-link">+2 010 0211 8700</a>
+          </div>
+        </div>
+
+        <h3 class="aboutus-getintouch">Contact Us</h3>
+        <div class="aboutus-socials">
+          <a href="https://www.behance.net/mabouzaid096e" class="aboutus-social-icon" title="Behance" target="_blank">
+            <i class="fa-brands fa-behance"></i>
+          </a>
+          <a href="https://www.instagram.com/atelier23egypt" class="aboutus-social-icon" title="Instagram" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/atelier23egypt/" class="aboutus-social-icon" title="LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <!-- ✅ Form with correct ID -->
+        <form class="aboutus-form" id="contact-form">
+          <div class="aboutus-form-row">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+          </div>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="phone" placeholder="Phone No" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 by atelier23 Architectural Visualization.<br>All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Mobile Menu -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" style="display:none;">
+    &#9776;
+  </button>
+  <div class="mobile-dropdown" id="mobileDropdown">
+    <button class="close-mobile-menu" id="closeMobileMenu" aria-label="Close menu">&times;</button>
+    <a href="main.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="partners.html">Partners</a>
+    <a href="about.html">About Us</a>
+    <a href="careers.html">Careers</a>
+    <a href="about.html#contact" class="contact-link">Contact Us</a>
+  </div>
+
+  <!-- Animations -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="../js/mobile-menu.js"></script>
+  <script src="../js/contact-form.js"></script>
+</body>
+</html>
